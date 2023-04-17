@@ -1,12 +1,11 @@
-# -Aspera-NCBI-SRA-
 使用Aspera从NCBI高速下载SRA数据
 要使用Aspera从NCBI高速下载SRA数据，请按照以下步骤操作：
 
 要使用Aspera从NCBI高速下载SRA数据，请按照以下步骤操作：
 
-一、下载Aspera客户端，首先，您需要在计算机上安装Aspera客户端。Aspera提供客户端的下载链接，请根据您的操作系统下载并安装适当的版本
+# 一、下载Aspera客户端，首先，您需要在计算机上安装Aspera客户端。Aspera提供客户端的下载链接，请根据您的操作系统下载并安装适当的版本
 
-1.在linux上使用conda安装Aspera，打开终端并激活您的conda环境。
+# 1.在linux上使用conda安装Aspera，打开终端并激活您的conda环境。
 
 conda active xxx
 
@@ -22,7 +21,7 @@ ascp -h
 
 Usage: ascp [OPTIONS] SOURCE... DESTINATION ...
 
-2.查找密钥（后面会用到）
+# 2.查找密钥（后面会用到）
 
 which ascp
 
@@ -30,18 +29,20 @@ ascp密钥通常在etc中，我的是这个
 
 /miniconda3/envs/gene/etc/asperaweb_id_dsa.openssh
 
-二、获取SRA数据的链接，打开NCBI网站
+# 二、获取SRA数据的链接，打开NCBI网站
 
 https://sra-explorer.info/#
 
-1.在搜索框中输入你要下载的数据id
+# 1.在搜索框中输入你要下载的数据id
 ![Image text](https://github.com/lundermatin/image/blob/main/image.png)
 
-2.添加下载
+# 2.添加下载
+![Image text](https://github.com/lundermatin/image/blob/main/v2-9eeadafef60f2b9808f114b50d238881_r.jpg)
 
-3.修改并复制命令
+# 3.修改并复制命令
+![Image text](https://github.com/lundermatin/image/blob/main/v2-51a968f7b76bc322ef9027ef19cdf2bd_r.jpg)
 
-4.使用Aspera下载SRA数据 打开终端或命令提示符窗口，并输入以下命令：
+# 4.使用Aspera下载SRA数据 打开终端或命令提示符窗口，并输入以下命令：
 
 ascp -QT -l 300m -P33001 -i ~/miniconda3/envs/gene/etc/asperaweb_id_dsa.openssh era-fasp@fasp.sra.ebi.ac.uk:vol1/fastq/SRRXXX/SRRXXXXXX/SRRXXXXXX_1.fastq.gz . 
 
